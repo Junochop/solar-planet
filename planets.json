@@ -1,0 +1,76 @@
+{
+    "planets": [
+        {
+            "name": "Sun",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Mercury",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Venus",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Earth",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Mars",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Jupiter",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Saturn",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Uranus",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        },
+        {
+            "name": "Neptune",
+            "imageUrl": "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg",
+            "description": 21,
+            "isGasPlanet": true,
+            "numberOfMoons": "2",
+            "nameOfLargestMoon": "big one 1"
+        }
+    ]
+}
