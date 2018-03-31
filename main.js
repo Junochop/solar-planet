@@ -30,22 +30,48 @@ function executeThisFunctionAfterFileLoads() {
     builddomString(data.planets);
     hoverEventListeners(); 
    
-    //hoverEventListeners();<this should be add event listerner
+    //hoverEventListeners();<this should be added event listerner
 }
 
 //This will add hover feature
 
-
 const hoverEventListeners = () => {
+    hoverEventListenersIn();
+    hoverEventListenersOut(); 
+}
+
+const hoverEventListenersIn = () => {
     const hovercards = document.getElementsByClassName("star");
     for (let i =0; i < hovercards.length; i++){
-    hovercards[i].addEventListener("click", typesome) 
+    hovercards[i].addEventListener("mouseover", hoverin) 
+    }
+};
+const hoverEventListenersOut = () => {
+    const hovercard2 = document.getElementsByClassName("star");
+    for (let j = 0; j < hovercard2.length; j++) {
+        hovercard2[j].addEventListener("mouseout", hoverout)
     }
 };
 
-const typesome =(e) => {
- console.log("hi");
+const hoverin =(e) => {
+    const displaypic = e.target.parentNode.firstChild;
+    if(displaypic.parentNode.className === "star"){
+    displaypic.style.opacity = "0.0";
+    displaypic.nextSibling.style.opacity = "1";
+    console.log("holla", displaypic);
+    }
 }
+
+const hoverout = (e) => {
+    const displaypic2 = e.target.parentNode.firstChild;
+    if (displaypic2.parentNode.className === "star") {
+        displaypic2.style.opacity = "1";
+        displaypic2.nextSibling.style.opacity = "0.0";
+        console.log("holla", displaypic2);
+    }
+}
+
+
 
 
 
