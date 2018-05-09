@@ -9,7 +9,13 @@ body {
     opacity: 0;
 }
 
-
+.searchdiv {
+  position:relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 95%;
+  transform: translateX(-50%);
+}
 
 #planet-cardContainer {
     display: flex;
@@ -35,7 +41,7 @@ body {
 .solo-planet {
     width: 200px;
     height: 200px;
-  
+
 }
 
 #solo {
@@ -47,11 +53,11 @@ body {
     color: white;
     background-color: black;
     align-items: center;
-    position: absolute;            
+    position: absolute;
     top: 20%;
     right: 30%;
 
-  
+
 }
 
 
