@@ -15,8 +15,8 @@ An app that helps you learn about our solar system.
 - Start typing in the search bar to filter through the planets
 
 ## Screenshot
-![Hompage]()
-![Card page]()
+![Hompage](https://raw.githubusercontent.com/Junochop/solar-planet/master/pics/Screen%20Shot%202018-05-09%20at%207.27.41%20AM.png)
+![Card page](https://raw.githubusercontent.com/Junochop/solar-planet/master/pics/Screen%20Shot%202018-05-09%20at%207.27.58%20AM.png)
 ## How to Run
 - cd to directory in terminal
 - clone this repo
