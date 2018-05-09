@@ -1,5 +1,3 @@
-console.log("hi");
-
 const printToDom = (domString, divID) => {
     document.getElementById(divID).innerHTML += domString;
 
@@ -8,7 +6,7 @@ const printToDom = (domString, divID) => {
 const builddomString = (planetArray) => {
     let domString = "";
     planetArray.forEach((planet) => {
-        
+
         domString += `<div class="star">`
         domString += `<h1>${planet.name}</h1>`;
         domString += `<img class="planet-image" src=${planet.imageUrl}>`;
@@ -17,10 +15,11 @@ const builddomString = (planetArray) => {
 
 
     });
-    
+
 
     printToDom(domString, "planet-cardContainer");
 };
+
 
 
 
@@ -29,9 +28,10 @@ function executeThisFunctionAfterFileLoads() {
     const data = JSON.parse(this.responseText);
     console.log("data", data);
     builddomString(data.planets);
-    hoverEventListeners(); 
-   
-   
+    hoverEventListeners();
+    searchCard(data.planets);
+
+
 }
 
 
@@ -39,14 +39,14 @@ function executeThisFunctionAfterFileLoads() {
 
 const hoverEventListeners = () => {
     hoverEventListenersIn();
-    hoverEventListenersOut(); 
+    hoverEventListenersOut();
     clickEventListenersOut()
 }
 
 const hoverEventListenersIn = () => {
     const hovercards = document.getElementsByClassName("star");
     for (let i =0; i < hovercards.length; i++){
-    hovercards[i].addEventListener("mouseover", hoverin) 
+    hovercards[i].addEventListener("mouseover", hoverin)
     }
 };
 const hoverEventListenersOut = () => {
@@ -78,10 +78,10 @@ const hoverout = (e) => {
 //clickadd function
 const clickEventListenersOut = () => {
     const hovercard3 = document.getElementsByClassName("star");
-    
+
     for (let k = 0; k < hovercard3.length; k++) {
         hovercard3[k].addEventListener("click", buildstardomString)
-        
+
     }
 };
 
@@ -90,17 +90,17 @@ const buildstardomString = (e)=>{
 
     const starz = e.target.parentNode;
     document.getElementById("planet-cardContainer").style.display = "none";
-    
+
     let starstring = "";
 
-    starstring += `<div id="solo">`;
+    starstring += `<div id="solo" class="planetcard">`;
     starstring += `<button id="close">X</button>`;
     starstring += `<h1>${starz.children[0].innerHTML}</h1>`;
     starstring += `<img class="solo-planet" src=${starz.children[1].src}>`;
     starstring += `<p>${starz.children[2].innerHTML}</p>`;
     starstring += `</div>`;
-  
-   
+
+
     printToDom(starstring, "star-cardContainer");
     closestar();
 };
@@ -117,12 +117,30 @@ const closedown=()=> {
     window.location.reload(false);
     // document.getElementById("star-cardContainer").style.display = "none";
     // document.getElementById("planet-cardContainer").style.display = "contents"
-   
+
 }
 
 
+const searchCard = (array) => {
+document.getElementById('search').addEventListener('click', () => {
+  const search = document.getElementById('inputField').value.toLowerCase();
+  let newSearch = [];
+  search.split(' ').forEach((word) => {
+    array.forEach((planet) => {
+      if (planet.name.toLowerCase().includes(word)) {
+        newSearch.push(planet);
+      }
+    });
+  });
 
-    
+  console.log(newSearch);
+  builddomString(newSearch);
+  hoverEventListeners();
+
+});
+}
+
+
 
 
 
@@ -137,6 +155,7 @@ const startApplication = () => {
     myRequest.open("GET", "planets.json");
     myRequest.send();
     console.log("myrequest", myRequest);
+
 };
 
 
