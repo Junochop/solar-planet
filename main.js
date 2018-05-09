@@ -1,5 +1,3 @@
-console.log("hi");
-
 const printToDom = (domString, divID) => {
     document.getElementById(divID).innerHTML += domString;
 
@@ -24,12 +22,14 @@ const builddomString = (planetArray) => {
 
 
 
+
 function executeThisFunctionAfterFileLoads() {
 
     const data = JSON.parse(this.responseText);
     console.log("data", data);
     builddomString(data.planets);
     hoverEventListeners();
+    searchCard(data.planets);
 
 
 }
@@ -120,11 +120,25 @@ const closedown=()=> {
 
 }
 
+
+const searchCard = (array) => {
 document.getElementById('search').addEventListener('click', () => {
-  const search = document.getElementById('inputField').value;
-  console.log(search);
+  const search = document.getElementById('inputField').value.toLowerCase();
+  let newSearch = [];
+  search.split(' ').forEach((word) => {
+    array.forEach((planet) => {
+      if (planet.name.toLowerCase().includes(word)) {
+        newSearch.push(planet);
+      }
+    });
+  });
+
+  console.log(newSearch);
+  builddomString(newSearch);
+  hoverEventListeners();
 
 });
+}
 
 
 
