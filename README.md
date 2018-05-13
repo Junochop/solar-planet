@@ -1,7 +1,7 @@
 # Solar System
 
 ## Specs
-> Create a pageto discover our solar system.
+> Create a page to discover our solar system.
 
 * HTML5
 * CSS3
