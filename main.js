@@ -15,8 +15,6 @@ const builddomString = (planetArray) => {
 
 
     });
-
-
     printToDom(domString, "planet-cardContainer");
 };
 
@@ -30,7 +28,6 @@ function executeThisFunctionAfterFileLoads() {
     builddomString(data.planets);
     hoverEventListeners();
     searchCard(data.planets);
-
 
 }
 
